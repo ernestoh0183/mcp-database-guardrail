@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "sqlite-database-guardrail": {
+      "command": "python",
+      "args": [
+        "server_sqlite.py"
+      ],
+      "env": {
+        "SQLITE_DB_PATH": "empresa_demo.db"
+      }
+    },
+    "postgres-database-guardrail": {
+      "command": "python",
+      "args": [
+        "server_postgres.py"
+      ],
+      "env": {
+        "PG_HOST": "localhost",
+        "PG_PORT": "5432",
+        "PG_DATABASE": "empresa_prod",
+        "PG_USER": "readonly_ai_user",
+        "PG_PASSWORD": "your_secure_password_here",
+        "PG_SCHEMA": "public"
+      }
+    },
+    "mysql-database-guardrail": {
+      "command": "python",
+      "args": [
+        "server_mysql.py"
+      ],
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_DATABASE": "empresa_prod",
+        "MYSQL_USER": "readonly_ai",
+        "MYSQL_PASSWORD": "your_secure_password_here"
+      }
+    }
+  }
+}
